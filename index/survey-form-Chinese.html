@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <title>小红书用户数据调查表单</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/survey-form-Chinese.css"/>
+</html>
+<body>
+  <h1 id="title">小红书用户数据调查表单</h1>
+  <p id="description">感谢您的宝贵时间</p>
+  <hr>
+  <form id="survey-form">
+    <label for="name" id="name-label">姓名</label>
+    <input id="name" type="text" placeholder="请填写您的姓名" required/>
+
+    <label for="email" id="email-label">邮件</label>
+    <input id="email" type="email" placeholder="邮箱@email.com" required/>
+
+    <label for="number" id="number-label">年龄（可选）<label/>
+    <input id="number" type="number" min="8" max="120" placeholder="Age" required>
+
+    <label for="dropdown">您使用小红书的频率是?</label>
+    <select id="dropdown">
+      <option value="">选择</option>
+      <option value="1">每天</option>
+      <option value="2">每周</option>
+      <option value="3">每月 </option>
+      <option value="4">偶尔</option>
+    </select>
+
+    <label>您会在小红书上进行点赞和收藏吗?</label>
+    <label><input type="radio" value="1" name="radio"/>会的</label>
+    <label><input type="radio" value="2" name="radio"/>偶尔</label>
+    <label><input type="radio" value="3" name="radio"/>不会</label>
+
+    <label for="feature">您常浏览的频道是?</label>
+    <select id="feature">
+      <option value="">选择</option>
+      <option value="1">推荐</option>
+      <option value="2">关注</option>
+      <option value="3">发现</option>
+    </select>
+
+    <label>您喜欢的内容类型是? (可多选)</label>
+    <label><input type="checkbox" value="1">美妆护肤</label>
+    <label><input type="checkbox" value="2">时尚穿搭</label>
+    <label><input type="checkbox" value="3">美食烹饪</label>
+    <label><input type="checkbox" value="4">旅游攻略</label>
+    <label><input type="checkbox" value="5">数码科技</label>
+    <label><input type="checkbox" value="6">文化艺术</label>
+    <label><input type="checkbox" value="7">运动健身</label>
+    <label><input type="checkbox" value="8">其他</label>
+
+    <label>您对小红书有什么期望和建议吗?</label>
+    <textarea id="comments" name="comment" rows="5" cols="50" placeholder="在此输入您的建议..."></textarea>
+
+    <input id="submit" value="submit" type="submit">
+  </form>
+  </hr class="bottom-line">
+</body>
