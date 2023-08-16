@@ -50,6 +50,8 @@ body{
   }
   h1, h2, h3{
     text-align:center;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight:bolder;
   }
   .flex-purcharse {
       display: flex;
@@ -71,8 +73,15 @@ body{
       padding: 0;
       color: black;
     }
+    .price{
+        color:blue;
+    }
     .flex-pur-box ul{
       text-align:left;
+    }
+    #submit{
+        color: aliceblue;
+        background-color: #A04000;
     }
     @media (max-width: 350px) {
       #video {
