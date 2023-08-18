@@ -265,7 +265,6 @@ h2.description {
   background-color: var(--main-purple);
   max-width: 980px;
   border-style: dotted;
-  border-radius: 20% 20%;
   opacity: 0.9;
 }
 .contact-details {
