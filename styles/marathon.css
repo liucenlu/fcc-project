@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+  
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* 980px / 16px = 61.25em */
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* 460px / 16px = 28.75em */
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 0.5rem;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+    font-size: 2.4rem;
+  }
+  .message {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  .button_be{
+    text-align: center;
+    font-size: 2.4rem;
+  }
