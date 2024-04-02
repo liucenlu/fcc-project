@@ -1,7 +1,7 @@
 // 发送请求获取数据函数
 function fetchData() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://127.0.0.1:5000/api/get-data', true);
+    xhr.open('GET', 'http://10.151.10.250:3000/api/get-data', true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
             try {
@@ -22,7 +22,12 @@ function fetchData() {
 }
 
 // 页面加载时获取数据
-document.addEventListener('DOMContentLoaded', fetchData);
+document.addEventListener('DOMContentLoaded', function () {
+    fetchData(); // 初始加载一次
+
+    // 每隔10秒自动获取数据
+    setInterval(fetchData, 10000);
+});
 
 // 获取开始按钮的引用并添加点击事件监听器
 const startButton = document.getElementById('start');
