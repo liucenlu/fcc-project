@@ -1,7 +1,7 @@
 // 发送请求获取数据函数
 function fetchData() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://10.151.10.250:3000/api/get-data', true);
+    xhr.open('GET', 'http://10.151.10.250:5000/api/get-data', true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
             try {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetchData(); // 初始加载一次
 
     // 每隔10秒自动获取数据
-    setInterval(fetchData, 10000);
+    setInterval(fetchData, 100);
 });
 
 // 获取开始按钮的引用并添加点击事件监听器
@@ -36,7 +36,7 @@ startButton.addEventListener('click', function () {
     const xhr = new XMLHttpRequest();
 
     // 配置请求方法和URL
-    xhr.open('POST', 'http://127.0.0.1:5000/api/start-marathon', true);
+    xhr.open('POST', '10.151.10.250:5000/api/start-marathon', true);
 
     // 设置请求头（如果需要）
     xhr.setRequestHeader('Content-Type', 'application/json');
