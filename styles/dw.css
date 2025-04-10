@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+header {
+    text-align: center;
+    color: #000000;
+    background-color: #dc9988;;
+}
+i{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 55px;
+}
+body{
+    background-image: url('../images/背景.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* 可选：固定背景图片 */
+}
+#lcContainer {
+    position:absolute;
+}
+
+.fa-location-dot {
+    color: #b62b2b;
+    font-size: 2xl; /* 如果 2xl 是字体大小，请更改为合法的 CSS 单位，如 px */
+}
+#lc1{
+    position: absolute;
+    top: 580px;
+    left: 400px;
+}
+#lc2{
+    position: absolute;
+    top: 600px;
+    left: 280px;
+}
+#lc3{
+    position: absolute;
+    top: 780px;
+    left: 550px;
+}
+#lc4{
+    position: absolute;
+    top: 660px;
+    left: 340px;
+}
+#lc5{
+    position: absolute;
+    top: 500px;
+    left: 510px;
+}
+#lc6{
+    position: absolute;
+    top: 750px;
+    left: 1100px;
+}
+#lc7{
+    position: absolute;
+    top: 550px;
+    left: 1300px;
+}
+#lc8{
+    position: absolute;
+    top: 540px;
+    left: 1200px;
+}
+#lc9{
+    position: absolute;
+    top: 530px;
+    left: 1250px;
+}
+#lc10{
+    position: absolute;
+    top: 510px;
+    left: 1270px;
+}
+
+nav {
+    display: flex;
+    margin-top: 10px;
+    background-color: #ce8370;
+    color: #ffffff;
+    padding: 15px 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.;
+    border-top: 4px solid #ffffff; 
+  }
+
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  padding: 1px;
+  margin-left: 40px;
+  margin-right: 50px;
+  justify-content: space-between; /* 让子元素平均分布在导航栏上 */
+  width: 100%;
+  }
+
+  nav ul li {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s; /* 添加过渡效果 */
+  }
+  nav ul li a:hover {
+    color: #ff0; /* 悬停时改变字体颜色为黄色 */
+  }
+  

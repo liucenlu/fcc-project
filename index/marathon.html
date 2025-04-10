@@ -5,27 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marathon</title>
     <link rel="stylesheet" href="../styles/marathon.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   </head>
   <body>
     <header class="header">
         <h1>马拉松比赛</h1>
       </header>
-      <div class="main">
-        <div class="message">
-          <div id="epc">EPC:</div>
-          <div id="face">Face:</div>
-          <div id="result">最终成绩：</div>
-        </div>
-          <div class="button_se">
-              <div class="button_start">
-                  <button id="start">比赛开始</button>
-              </div>
-              <div class="button_begin">
-                <button id="end">比赛结束</button>
-              </div>
+      <section class="section-container">
+      <div id="left_se">
+        <div class="main">
+          <div class="message">
+            <div id="epc">EPC:</div>
+            <div id="face">Face:</div>
+            <div id="result">最终成绩：</div>
           </div>
+            <div class="button_se">
+                <div class="button_start">
+                    <button id="start">比赛开始</button>
+                </div>
+                <div class="button_begin">
+                  <button id="end">比赛结束</button>
+                </div>
+            </div>
+        </div>
+        <div class="alert" id="alert" style="display: none;">!!!</div>
       </div>
-      <div class="alert" id="alert" style="display: none;">!!!</div>
+      <div id="right_se"></div>
+    </section>
     <script src="../scripts/marathon.js"></script>
   </body>
 </html>

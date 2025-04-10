@@ -1,8 +1,108 @@
 * {
-  box-sizing: border-box; /* 让所有元素的宽度和高度包括内边距和边框 */
+  box-sizing: border-box; 
 }
 
-/* 响应式布局 */
+body {
+  margin: 0; 
+  font-family: sans-serif; 
+  background: #f5f6f7; 
+}
+section {
+  position: relative;
+  margin-right: 50px; 
+}
+
+.header {
+  text-align: center; 
+  padding: 0.5rem;
+  top: 0;
+  left: 0;
+  width:100%; 
+  background-color: #0a0a23; 
+  color: #fff; 
+  border-bottom: 4px solid #fdb347; 
+  font-size: 2.4rem; 
+}
+
+
+.main {
+  margin-top: 140px; 
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 320px;
+}
+
+.message {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+.button_se {
+  text-align: center; 
+  font-size: 2.4rem; 
+  border: none; 
+  margin: 50px;
+  border-radius: 8px;
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+  display: flex;
+}
+
+.button_start,
+.button_begin {
+  margin: auto; 
+  font-size: 1.6rem; 
+  padding: 12px 24px; 
+}
+
+/* 设置鼠标悬停时的样式 */
+#start:hover,
+#end:hover {
+  background-color: rgba(128, 128, 128, 0.5); /* 悬停时的背景色 */
+  padding: 12px 24px; /* 内边距调整 */
+}
+.section-container {
+  display: flex; /* 使用 Flexbox 布局 */
+}
+#left_se {
+  width: 70%; /* 左侧区域宽度 */
+}
+
+#right_se {
+  width: 30%; /* 右侧区域宽度 */
+  background-color: #e4ebef;
+  
+}
+.section-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 70%; /* 与 #left_se 右侧对齐 */
+  width: 2px;
+  background-color: #ccc; /* 分割线颜色 */
+  z-index: 1; /* 确保在内容之上 */
+}
+
+.alert {
+  position: absolute; 
+  top: 300px; 
+  right:940px;
+  color: red; /* 红色 */
+  font-size: 320px; /* 更大的字体尺寸 */
+  z-index: 9; /* 确保在顶层 */
+  animation: blink 1s infinite alternate; /* 添加闪烁动画 */
+}
+
+@keyframes blink {
+  from {
+    opacity: 1; /* 完全可见 */
+  }
+  to {
+    opacity: 0; /* 完全隐藏 */
+  }
+}
+
 /* 当屏幕宽度小于等于 1200px 时 */
 @media (max-width: 75em) {
   html {
@@ -21,82 +121,5 @@
 @media (max-width: 28.75em) {
   html {
     font-size: 55%; /* 调整字体大小为原来的 55% */
-  }
-}
-
-/* 设置 body 标签的样式 */
-body {
-  margin: 0; /* 去除默认外边距 */
-  font-family: sans-serif; /* 设置字体为无衬线字体 */
-  background: #f5f6f7; /* 设置背景色 */
-}
-
-/* 设置 header 标签的样式 */
-.header {
-  text-align: center; /* 文字居中 */
-  padding: 0.5rem; /* 内边距 */
-  top: 0;
-  left: 0;
-  width:100%; /* 宽度为100% */
-  background-color: #0a0a23; /* 背景色 */
-  color: #fff; /* 文字颜色 */
-  border-bottom: 4px solid #fdb347; /* 底部边框 */
-  font-size: 2.4rem; /* 字体大小 */
-}
-
-/* 设置 main 类的样式 */
-.main {
-  margin: 140px; /* 外边距 */
-}
-
-/* 设置 message 类的样式 */
-.message {
-  text-align: center; /* 文字居中 */
-  font-size: 2.4rem; /* 字体大小 */
-}
-
-/* 设置 button_se 类的样式 */
-.button_se {
-  text-align: center; /* 文字居中 */
-  font-size: 2.4rem; /* 字体大小 */
-  border: none; /* 去除边框 */
-  margin: 50px; /* 外边距 */
-  border-radius: 8px; /* 边框圆角 */
-  cursor: pointer; /* 鼠标指针样式 */
-  transition: background-color 0.3s, color 0.3s; /* 过渡效果 */
-  display: flex; /* 使用 Flexbox 布局 */
-}
-
-/* 设置 button_start 和 button_begin 类的样式 */
-.button_start,
-.button_begin {
-  margin: auto; /* 外边距自动调整 */
-  font-size: 1.6rem; /* 字体大小 */
-  padding: 12px 24px; /* 内边距 */
-}
-
-/* 设置鼠标悬停时的样式 */
-#start:hover,
-#end:hover {
-  background-color: rgba(128, 128, 128, 0.5); /* 悬停时的背景色 */
-  padding: 12px 24px; /* 内边距调整 */
-}
-.alert {
-  position: fixed; /* 固定定位 */
-  top: 50%; /* 垂直居中 */
-  left: 50%; /* 水平居中 */
-  transform: translate(-50%, -50%); /* 居中 */
-  color: red; /* 红色 */
-  font-size: 48px; /* 更大的字体尺寸 */
-  z-index: 9999; /* 确保在顶层 */
-  animation: blink 1s infinite alternate; /* 添加闪烁动画 */
-}
-
-@keyframes blink {
-  from {
-    opacity: 1; /* 完全可见 */
-  }
-  to {
-    opacity: 0; /* 完全隐藏 */
   }
 }

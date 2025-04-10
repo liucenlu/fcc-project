@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    nav ul {
+        list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: flex; /* 将导航栏设置为Flex容器 */
+  justify-content: space-between; /* 让子元素平均分布在导航栏上 */
+  position: fixed;
+    }
+
+    nav ul li {
+      display: flex;
+      margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .login-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .form-group button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #fff;
+    }
+
+    .product h3 {
+      margin-top: 0;
+    }
+
+    .product p {
+      margin-bottom: 5px;
+    }
+
+    .product button {
+      display: block;
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">首页</a></li>
+      <li><a href="#">管理员登录</a></li>
+      <li><a href="#">用户登录</a></li>
+      <li><a href="#">了解</a></li>
+      <li><a href="#">帮助</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <h2>Product List</h2>
+    <div class="product-list">
+      <div class="product">
+        <h3>Product 1</h3>
+        <p>Price: $10</p>
+        <p>Stock: 20</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <h3>Product 2</h3>
+        <p>Price: $8</p>
+        <p>Stock: 15</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Add more products here -->
+    </div>
+  </div>
+</body>
+</html>
