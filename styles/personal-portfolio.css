@@ -65,7 +65,25 @@ p {
 }
 .dcra{
   margin-top: 15px;
+  overflow: hidden; /* 隐藏超出内容 */
+  white-space: nowrap; /* 文字不换行 */
+  border-right: 2px solid; /* 光标闪烁效果 */
+  width: 0; /* 初始宽度为0 */
+  animation: typing 4s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
 }
+
+/* 打字动画 */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* 光标闪烁动画 */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor }
+}
+
 h1 {
   font-size: 6rem;
 }
